@@ -132,6 +132,19 @@ function Dashboard() {
           </div>
         </div>
       </div>
+      <div className="flex flex-col gap-[12px]  rounded-md bg-[#1a1a1a] border border-[#2c2c2c]">
+        <div className="flex items-center justify-between px-[24px] py-[12px] bg-[#282a2d] border-b border-b-[#3c3c3c] h-[67px]">
+          <h3 className="text-base font-bold text-[#fcfcfc] tracking-wide ">
+            Recent Activity
+          </h3>
+          <a
+            href="/client/deliverables"
+            className="text-[15px] text-[#026dfc] tracking-wide"
+          >
+            View all
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
