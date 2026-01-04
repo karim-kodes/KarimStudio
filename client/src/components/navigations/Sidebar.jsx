@@ -12,7 +12,7 @@ import { LogOut } from "lucide-react";
 
 function Sidebar() {
   const menuItems = [
-    { label: "Dashboard", icon: LayoutDashboard, path: "/client" },
+    { label: "Dashboard", icon: LayoutDashboard, path: "/client", end: true },
     { label: "Projects", icon: FolderKanban, path: "/client/projects" },
     { label: "Updates", icon: History, path: "/client/updates" },
     { label: "Deliverables", icon: Files, path: "/client/deliverables" },
@@ -30,10 +30,11 @@ function Sidebar() {
       </div>
       <div className="flex flex-col  flex-1 justify-between items-center p-[10px]">
         <div className="flex flex-col px-[16px] py-[16px] gap-[16px]">
-          {menuItems.map(({ label, icon: Icon, path }) => (
+          {menuItems.map(({ label, icon: Icon, path, end }) => (
             <NavLink
               key={label}
               to={path}
+              end={end}
               className={({ isActive }) =>
                 `flex items-center gap-[8px] w-[236px] px-[16px] py-[8px] rounded-md transition-all
     ${

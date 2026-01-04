@@ -7,6 +7,7 @@ import PublicLayout from "./layout/publicLayout";
 // Pages
 import Home from "./pages/public/Home";
 import Dashboard from "./pages/client/Dashboard";
+import Projects from "./pages/client/Projects";
 
 function App() {
   return (
@@ -28,6 +29,18 @@ function App() {
       >
         {/* DEFAULT CLIENT PAGE */}
         <Route index element={<Dashboard />} />
+      </Route>
+      <Route
+        path="/client/projects"
+        element={
+          <ClientLayout
+            title="Projects"
+            description="Overview of your project & activity"
+          />
+        }
+      >
+        {/* PROJECTS PAGE */}
+        <Route index element={<Projects />} />
       </Route>
     </Routes>
   );
