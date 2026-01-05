@@ -2,12 +2,13 @@ import { Routes, Route } from "react-router-dom";
 
 // Layouts
 import ClientLayout from "./layout/ClientLayout";
-import PublicLayout from "./layout/publicLayout";
+import PublicLayout from "./layout/PublicLayout";
 
 // Pages
 import Home from "./pages/public/Home";
 import Dashboard from "./pages/client/Dashboard";
 import Projects from "./pages/client/Projects";
+import ProjectDetails from "./pages/client/ProjectDetails";
 
 function App() {
   return (
@@ -18,29 +19,15 @@ function App() {
       </Route>
 
       {/* Client Portal */}
-      <Route
-        path="/client/"
-        element={
-          <ClientLayout
-            title="Dashboard"
-            description="Overview of your project & activity"
-          />
-        }
-      >
-        {/* DEFAULT CLIENT PAGE */}
+      <Route path="/client" element={<ClientLayout />}>
+        {/* Dashboard */}
         <Route index element={<Dashboard />} />
-      </Route>
-      <Route
-        path="/client/projects"
-        element={
-          <ClientLayout
-            title="Projects"
-            description="Overview of your project & activity"
-          />
-        }
-      >
-        {/* PROJECTS PAGE */}
-        <Route index element={<Projects />} />
+
+        {/* Projects */}
+        <Route path="projects">
+          <Route index element={<Projects />} />
+          <Route path=":projectSlug" element={<ProjectDetails />} />
+        </Route>
       </Route>
     </Routes>
   );

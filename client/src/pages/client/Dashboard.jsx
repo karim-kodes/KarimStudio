@@ -1,9 +1,8 @@
-import Badge from "../../components/common/Badge";
-import Button from "../../components/common/Button";
-import profileAvatar from "../../assets/images/default-profile.jpeg";
 import ClientStatsCard from "../../components/cards/ClientStatsCard";
 import ActivityCard from "../../components/cards/ActivityCard";
 import ActivityItem from "../../components/common/ActivityItem";
+import { useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 import {
   Folder,
   Files,
@@ -12,9 +11,18 @@ import {
   CircleCheck,
   Activity,
 } from "lucide-react";
-import ProjectProgress from "../../components/common/ProjectProgress";
+import ProjectDetailCard from "../../components/cards/ProjectDetailCard";
 
 function Dashboard() {
+  const { setHeader } = useOutletContext();
+
+  useEffect(() => {
+    setHeader({
+      title: "Dashboard",
+      description: "Overview of your project & activity",
+    });
+  }, []);
+
   const statsCards = [
     {
       id: 1,
@@ -68,13 +76,6 @@ function Dashboard() {
       time: "5 days ago",
     },
   ];
-  const steps = [
-    { label: "Discovery", completed: true },
-    { label: "Design", completed: true },
-    { label: "Development", completed: true },
-    { label: "Testing", completed: false },
-    { label: "Launch", completed: false },
-  ];
 
   return (
     <div className="flex flex-col gap-[32px] px-[24px] ">
@@ -88,56 +89,16 @@ function Dashboard() {
           />
         ))}
       </div>
-      <div className="flex w-full bg-[#1a1a1a] border border-[#2c2c2c] rounded-md h-auto py-[24px]">
-        <div className="flex flex-col w-[65%] h-full gap-[24px] ">
-          <div className="flex justify-between items-center px-[24px]">
-            <h2 className="text-lg text-[#fcfcfc] font-bold">
-              Natours - Tour Booking System
-            </h2>
-            <Badge text="In Progress" status="completed" />
-          </div>
-          <div className="w-full flex flex-col px-[24px] gap-[12px]">
-            <p className="text-sm text-[#fcfcfc] tracking-wide">
-              <span className="text-gray-400">Package : </span>
-              Professional
-            </p>
-            <p className="text-sm text-[#fcfcfc] tracking-wide">
-              <span className="text-gray-400">Start date : </span>
-              12 Jan 2025
-            </p>
-            <p className="text-sm text-[#fcfcfc] tracking-wide">
-              <span className="text-gray-400">Delivery : </span>
-              15 Feb 2025
-            </p>
-          </div>
-          <ProjectProgress progress={45} steps={steps} />
-        </div>
-        <div className="flex flex-1 flex-col  gap-[40px]">
-          <div className="flex flex-col gap-[16px] w-[70%] self-center">
-            <Button className="justify-center">View Project</Button>
-            <Button variant="outline" className="justify-center">
-              Message Team
-            </Button>
-          </div>
-          <div className="flex flex-col gap-[10px] w-[70%] self-center">
-            <p className="text-sm text-gray-400">Assigned To</p>
-            <div className="flex gap-[10px] items-center">
-              <img
-                src={profileAvatar}
-                alt="Profile Avatar"
-                className="w-[50px] h-[50px] rounded-full"
-              />
-              <p className="text-sm text-gray-400 tracking-wide">
-                {" "}
-                Abdikarim -{" "}
-                <span className="text-[#fcfcfc] font-semibold">
-                  KarimStudio
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProjectDetailCard
+        name="Natours - Tour Booking Platform"
+        packageType="Professional"
+        startDate="12 Jan 2025"
+        deliveryDate="15 Feb 2025"
+        projectManager="KarimStudio"
+        assignedMember="John Mccaty"
+        company="KarimStudio"
+      />
+
       <ActivityCard
         title="Recent Activity"
         linkText="View all"
