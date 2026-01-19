@@ -69,12 +69,6 @@ function Dashboard() {
       description: "Final payment invoice is ready",
       time: "3 days ago",
     },
-    {
-      icon: MessageCircle,
-      title: "New message from KarimStudio",
-      description: "We’ve shared an update on progress",
-      time: "5 days ago",
-    },
   ];
 
   return (
@@ -94,9 +88,11 @@ function Dashboard() {
         packageType="Professional"
         startDate="12 Jan 2025"
         deliveryDate="15 Feb 2025"
+        value={45}
         projectManager="KarimStudio"
         assignedMember="John Mccaty"
         company="KarimStudio"
+        btnText="View Project"
       />
 
       <ActivityCard

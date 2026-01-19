@@ -1,10 +1,14 @@
 import Navbar from "../components/navigations/Navbar";
 import Footer from "../components/sections/Footer";
-function PublicLayout({ children }) {
+import { Outlet } from "react-router-dom";
+
+function PublicLayout() {
   return (
     <div className="min-h-screen bg-dark text-white">
       <Navbar />
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

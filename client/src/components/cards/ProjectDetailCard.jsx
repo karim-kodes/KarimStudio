@@ -12,6 +12,8 @@ function ProjectDetailCard({
   assignedMember,
   company,
   projectManager,
+  value,
+  btnText,
 }) {
   const steps = [
     { label: "Discovery", completed: true },
@@ -45,11 +47,11 @@ function ProjectDetailCard({
             {projectManager}
           </p>
         </div>
-        <ProjectProgress progress={45} steps={steps} />
+        <ProjectProgress progress={value} steps={steps} />
       </div>
       <div className="flex flex-1 flex-col  gap-[40px]">
         <div className="flex flex-col gap-[16px] w-[70%] self-center">
-          <Button className="justify-center">View Project</Button>
+          <Button className="justify-center">{btnText}</Button>
           <Button variant="outline" className="justify-center">
             Message Team
           </Button>

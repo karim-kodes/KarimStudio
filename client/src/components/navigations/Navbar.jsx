@@ -9,7 +9,7 @@ function Navbar() {
 
   const [activeLink, setActiveLink] = useState("Home");
 
-  const navItems = ["Home", "Services", "Work", "Contact"];
+  const navItems = ["Home", "About", "Services", "Work", "Contact"];
 
   const getLinkCLasses = (item) => {
     const baseClasses =

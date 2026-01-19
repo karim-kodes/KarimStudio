@@ -5,7 +5,7 @@ function FilterBill({ text, status = "default" }) {
   };
   return (
     <span
-      className={`h-[32px] px-[18px] py-[10px] w-auto flex items-center justify-center rounded-md  border  text-sm  ${
+      className={`h-[32px] px-[18px] py-[10px] w-auto flex items-center justify-center rounded-md  border  text-sm cursor-pointer hover:bg-[#026dfc] hover:text-[#fcfcfc]  transition-all ease-in-out ${
         statusStyles[status] || statusStyles.default
       }`}
     >
