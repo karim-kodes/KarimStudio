@@ -13,7 +13,9 @@ function Project({
   return (
     <div className="flex items-center justify-between w-full bg-[#1a1a1a] border border-[#2c2c2c] rounded-md h-[147px] p-[24px]">
       <div className="flex flex-col gap-[16px] w-[350px] justify-center">
-        <h2 className="text-lg text-white font-bold tracking-wide">{name}</h2>
+        <h2 className="text-lg text-white font-semibold tracking-wide">
+          {name}
+        </h2>
         <div className="flex flex-col gap-[2px]">
           <p className="text-base text-gray-300 tracking-wide">Servive Type</p>
           <span className="text-sm tracking-wide text-gray-500">
