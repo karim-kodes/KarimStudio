@@ -6,6 +6,7 @@ import PublicLayout from "./layout/PublicLayout";
 
 // Pages
 import Home from "./pages/public/Home";
+import About from "./pages/public/About";
 import Dashboard from "./pages/client/Dashboard";
 import Projects from "./pages/client/Projects";
 import ProjectDetails from "./pages/client/ProjectDetails";
@@ -16,6 +17,7 @@ function App() {
       {/* Public Site */}
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Route>
 
       {/* Client Portal */}
