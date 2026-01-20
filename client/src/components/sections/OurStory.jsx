@@ -11,10 +11,11 @@ function OurStory() {
         </h2>
         <p className=" text-[15px] md:text-base text-gray-400">
           <span className="tracking-wide">
-            KarimStudio began as a personal journey to build meaningful digital
-            products, not just websites. What started as a passion for design
-            and development evolved into a studio focused on crafting systems
-            that solve real problems.
+            <span className="font-semibold text-blue-500">KarimStudio</span>{" "}
+            began as a personal journey to build meaningful digital products,
+            not just websites. What started as a passion for design and
+            development evolved into a studio focused on crafting systems that
+            solve real problems.
           </span>
           <br />
           <br />
