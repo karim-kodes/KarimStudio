@@ -16,6 +16,13 @@ function AboutHero() {
             Designing and building digital experiences that grow with purpose.
           </h2>
           <p className="max-w-[700px] text-gray-500 tracking-wide md:text-lg">
+
+            <span className="font-semibold text-blue-500">KarimStudio</span> was
+            founded with a simple goal to help brands and founders turn ideas
+            into clear, functional, and scalable digital products. What started
+            as a personal journey has grown into a focused practice built around
+            design, development, and long-term thinking.
+=======
             KarimStudio was founded with a simple goal to help brands and
             founders turn ideas into clear, functional, and scalable digital
             products. What started as a personal journey has grown into a
