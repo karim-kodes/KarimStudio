@@ -12,6 +12,7 @@ function Navbar() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("Home");
 
+
   // Define routes for each nav item
   const navItems = [
     { name: "Home", path: "/" },
@@ -31,6 +32,7 @@ function Navbar() {
       setActiveLink("Home");
     }
   }, [location]);
+
 
   const getLinkClasses = (itemName) => {
     const baseClasses =
