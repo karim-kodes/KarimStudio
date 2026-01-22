@@ -12,7 +12,6 @@ function Navbar() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("Home");
 
-
   // Define routes for each nav item
   const navItems = [
     { name: "Home", path: "/" },
@@ -32,7 +31,6 @@ function Navbar() {
       setActiveLink("Home");
     }
   }, [location]);
-
 
   const getLinkClasses = (itemName) => {
     const baseClasses =
@@ -75,7 +73,7 @@ function Navbar() {
           </h1>
         </Link>
 
-        <div className="hidden md:flex items-center backdrop-blur-sm justify-between gap-[20px] w-auto h-[43px] bg-gradient-to-l from-[#9DC1F1] to-[#ffffff] border border-[#8cbbf9] rounded-md">
+        <div className="hidden md:flex items-center backdrop-blur-sm justify-between gap-[20px] w-auto h-[43px] bg-gradient-to-l from-[#9DC1F1] to-[#9DC1F1] border border-[#8cbbf9] rounded-md">
           {navItems.map((item) => (
             <Link
               key={item.name}

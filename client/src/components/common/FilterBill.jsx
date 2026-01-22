@@ -1,11 +1,11 @@
 function FilterBill({ text, status = "default" }) {
   const statusStyles = {
-    active: "bg-[#026dfc] text-[#fcfcfc] border-[#026dfc]",
-    default: "bg-[#fcfcfc]/5  border-[#fcfcfc]/10 text-gray-400",
+    active: "bg-primary text-textprimary border-primary",
+    default: "bg-textprimary/5  border-textprimary/10 text-gray-400",
   };
   return (
     <span
-      className={`h-[32px] px-[18px] py-[10px] w-auto flex items-center justify-center rounded-md  border  text-sm cursor-pointer hover:bg-[#026dfc] hover:text-[#fcfcfc]  transition-all ease-in-out ${
+      className={`h-[32px] px-[18px] py-[10px] w-auto flex items-center justify-center rounded-md  border  text-sm cursor-pointer hover:bg-primary hover:text-textprimary  transition-all ease-in-out ${
         statusStyles[status] || statusStyles.default
       }`}
     >

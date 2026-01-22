@@ -11,7 +11,7 @@ export default function Button({
     rounded-md
     text-sm font-medium
     inline-flex items-center gap-2
-    border border-[#026DFC]
+    border border-primary
     transition
     items-center
     hover:opacity-90
@@ -25,10 +25,10 @@ export default function Button({
   
     `,
     outline: `
-      border border-[#026DFC]
-      text-[#026DFC]
+      border border-primary
+      text-primary
       bg-transparent
-      hover:bg-[#026DFC]/10
+      hover:bg-primary/10
     `,
   };
 

@@ -6,7 +6,7 @@ function ProjectProgress({ progress, steps }) {
     <div className="flex flex-col gap-[20px]">
       {/* Progress label + bar */}
       <div className="flex flex-col gap-[8px] px-[24px]">
-        <p className="text-base tracking-wide text-[#fcfcfc]">
+        <p className="text-base tracking-wide text-textprimary">
           Project progress: <span className="text-gray-400">{progress}%</span>
         </p>
 

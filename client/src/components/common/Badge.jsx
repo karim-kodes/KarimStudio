@@ -1,6 +1,6 @@
 function Badge({ text, status = "default" }) {
   const statusStyles = {
-    completed: "bg-[#026dfc]/10 border-[#026dfc] text-[#026dfc]",
+    completed: "bg-primary/10 border-primary/10 text-primary",
     active: "bg-green-500/10 border-green-500 text-green-500",
     pending: "bg-yellow-500/10 border-yellow-500 text-yellow-500",
     cancelled: "bg-red-500/10 border-red-500 text-red-500",

@@ -9,7 +9,7 @@ function ResultCard({ icon: Icon, caption, title }) {
         </span>
         <p className="text-sm text-gray-500 tracking-wide">{caption}</p>
       </div>
-      <h2 className="text-[32px] font-semibold text-left text-[#fcfcfc]">
+      <h2 className="text-[32px] font-semibold text-left text-textprimary">
         {title}
       </h2>
     </div>
