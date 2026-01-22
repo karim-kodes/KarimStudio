@@ -4,7 +4,7 @@ function ActivityItem({ icon: Icon, title, description, time }) {
   return (
     <div className="flex justify-between w-full py-[12px] max-h-[65px] border-b border-b-[#3c3c3c] last:border-b-0">
       <div className="flex gap-[10px] h-[40px] w-[301px]">
-        <span className="flex items-center justify-center w-[40px] h-[40px] rounded-md bg-[#026dfc] text-white">
+        <span className="flex items-center justify-center w-[40px] h-[40px] rounded-md bg-primary text-white">
           <Icon size={24} />
         </span>
 

@@ -1,4 +1,4 @@
-export default function Caption({ text = "Portfolio", className = "" }) {
+function Caption({ text = "Portfolio", className = "" }) {
   return (
     <div
       className={`
@@ -10,9 +10,11 @@ export default function Caption({ text = "Portfolio", className = "" }) {
         ${className}
       `}
     >
-      <span className="h-[8px] w-[8px] bg-[#026DFC] rounded-full  shadow-sm shadow-blue-300/80" />
+      <span className="h-[8px] w-[8px] bg-primary rounded-full  shadow-sm shadow-blue-300/80" />
 
       <p className="text-xs font-normal text-white tracking-wider">{text} </p>
     </div>
   );
 }
+
+export default Caption;

@@ -18,11 +18,11 @@ function PackageCard({
       className={`flex flex-col gap-[20px] w-[340px] md:w-[300px] p-[20px] rounded-lg relative transition-all ${
         isActive
           ? " scale-x-105 md:scale-x-100 md:scale-y-110 bg-gradient-to-bl from-[#1a1a1a] to-[#2d2d2d] border border-blue-500"
-          : "h-[448px] bg-gradient-to-bl from-[#9DC1F1] to-[#ffffff]"
+          : "h-[448px] bg-gradient-to-bl from-[#9DC1F1] to-textprimary"
       }`}
     >
       {isPopular && (
-        <span className="flex w-fit items-center bg-gradient-to-l from-[#026DFC] to-[#14366B] border border-[#026DFC] h-[25px] px-[20px] py-[5px] rounded-full text-sm text-[#fcfcfc] absolute -top-3 left-[32%]">
+        <span className="flex w-fit items-center bg-gradient-to-l from-primary to-[#14366B] border border-primary h-[25px] px-[20px] py-[5px] rounded-full text-sm text-textprimary absolute -top-3 left-[32%]">
           POPULAR
         </span>
       )}
@@ -34,7 +34,7 @@ function PackageCard({
           <Icon size={24} />
         </span>
         <h2
-          className={`font-semibold text-[32px] bg-gradient-to-l from-[#026DFC] to-[#14366B] bg-clip-text text-transparent`}
+          className={`font-semibold text-[32px] bg-gradient-to-l from-primary to-[#14366B] bg-clip-text text-transparent`}
         >
           ${price}
         </h2>
@@ -60,7 +60,7 @@ function PackageCard({
       <div className="flex flex-col gap-[8px] w-[260px]">
         {features.map((feature, index) => (
           <div key={index} className="flex gap-[5px] w-[260px]">
-            <span className="flex items-center justify-center w-[18px] h-[18px] text-[#fcfcfc] bg-[#549eff] rounded-full flex-shrink-0">
+            <span className="flex items-center justify-center w-[18px] h-[18px] text-textprimary bg-[#549eff] rounded-full flex-shrink-0">
               <Check size={14} />
             </span>
             <span

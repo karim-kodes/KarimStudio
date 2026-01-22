@@ -11,7 +11,7 @@ function ProgressBar({ value = 60, height }) {
         style={{ height: `${height}px` }}
       >
         <div
-          className="h-full bg-[#026dfc] rounded-full transition-all duration-500"
+          className="h-full bg-primary rounded-full transition-all duration-500"
           style={{ width: `${value}%` }}
         />
       </div>

@@ -10,9 +10,9 @@ function ProjectTimelineCard({ value }) {
   ];
   return (
     <div className="flex flex-col gap-[24px]  bg-[#1a1a1a] border border-[#2c2c2c] rounded-md">
-      <div className="flex items-center justify-between w-full rounded-t-md bg-[#026dfc]/10 px-[24px] py-[12px] ">
+      <div className="flex items-center justify-between w-full rounded-t-md bg-primary/10 px-[24px] py-[12px] ">
         <div className="flex flex-col gap-[2px]">
-          <p className="text-base text-[#fcfcfc] tracking-wide font-semibold">
+          <p className="text-base text-textprimary tracking-wide font-semibold">
             Project Timeline
           </p>
           <span className="text-gray-400 text-sm tracking-wide font-normal ">
@@ -21,7 +21,7 @@ function ProjectTimelineCard({ value }) {
         </div>
         <a
           href="/project-timeline"
-          className="text-sm text-[#026dfc] tracking-wide font-normal"
+          className="text-sm text-primary tracking-wide font-normal"
         >
           View full plan
         </a>

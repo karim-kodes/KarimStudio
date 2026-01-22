@@ -26,23 +26,23 @@ function ProjectDetailCard({
     <div className="flex w-full bg-[#1a1a1a] border border-[#2c2c2c] rounded-md h-auto py-[24px]">
       <div className="flex flex-col w-[65%] h-full gap-[24px] ">
         <div className="flex justify-between items-center px-[24px]">
-          <h2 className="text-lg text-[#fcfcfc] font-bold">{name}</h2>
+          <h2 className="text-lg text-textprimary font-bold">{name}</h2>
           <Badge text="In Progress" status="completed" />
         </div>
         <div className="w-full flex flex-col px-[24px] gap-[12px]">
-          <p className="text-sm text-[#fcfcfc] tracking-wide">
+          <p className="text-sm text-textprimary tracking-wide">
             <span className="text-gray-400">Package : </span>
             {packageType}
           </p>
-          <p className="text-sm text-[#fcfcfc] tracking-wide">
+          <p className="text-sm text-textprimary tracking-wide">
             <span className="text-gray-400">Start date : </span>
             {startDate}
           </p>
-          <p className="text-sm text-[#fcfcfc] tracking-wide">
+          <p className="text-sm text-textprimary tracking-wide">
             <span className="text-gray-400">Delivery : </span>
             {deliveryDate}
           </p>
-          <p className="text-sm text-[#fcfcfc] tracking-wide">
+          <p className="text-sm text-textprimary tracking-wide">
             <span className="text-gray-400">Project Manager : </span>
             {projectManager}
           </p>
@@ -67,7 +67,7 @@ function ProjectDetailCard({
             <p className="text-sm text-gray-400 tracking-wide">
               {" "}
               {assignedMember} -{" "}
-              <span className="text-[#fcfcfc] font-semibold">{company}</span>
+              <span className="text-textprimary font-semibold">{company}</span>
             </p>
           </div>
         </div>

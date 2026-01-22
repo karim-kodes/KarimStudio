@@ -5,7 +5,7 @@ function ProgressStep({ label, completed, index }) {
     <div className="flex flex-col gap-[8px] items-center w-max">
       <p
         className={`text-base tracking-wide ${
-          completed ? "text-[#fcfcfc]" : "text-gray-400"
+          completed ? "text-textprimary" : "text-gray-400"
         }`}
       >
         {index}. {label}
@@ -13,7 +13,7 @@ function ProgressStep({ label, completed, index }) {
 
       <CircleCheck
         size={24}
-        className={completed ? "text-[#026dfc]" : "text-gray-400"}
+        className={completed ? "text-primary" : "text-gray-400"}
       />
     </div>
   );

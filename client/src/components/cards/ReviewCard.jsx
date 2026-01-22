@@ -26,7 +26,7 @@ function ReviewCard({ photo, name, position, review, rating = 5 }) {
               key={index}
               size={24}
               fill={index < rating ? "#026dfc" : "#fcfcfc"}
-              className={index < rating ? "text-[#026dfc]" : "text-[#fcfcfc]"}
+              className={index < rating ? "text-primary" : "text-textprimary"}
             />
           ))}
         </div>

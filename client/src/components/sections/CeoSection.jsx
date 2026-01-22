@@ -12,7 +12,7 @@ function CeoSection() {
     "Based in Kenya, working with clients and projects globally",
   ];
   return (
-    <div className="flex justify-between px-[20px] py-[40px] flex-col md:flex-row md:px-[120px] md:py-[120px]">
+    <div className="flex justify-between gap-[40px] px-[20px] py-[40px] flex-col md:flex-row md:px-[120px] md:py-[120px]">
       <div className="flex items-center justify-center bg-gradient-to-r from-[#aac1e6] to-[#026dfc] p-[5px] rounded-xl">
         <img src={ceoImage} alt="" className="w-[600px] rounded-lg" />
       </div>

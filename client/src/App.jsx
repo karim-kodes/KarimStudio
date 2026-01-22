@@ -10,6 +10,7 @@ import About from "./pages/public/About";
 import Dashboard from "./pages/client/Dashboard";
 import Projects from "./pages/client/Projects";
 import ProjectDetails from "./pages/client/ProjectDetails";
+import Services from "./pages/public/Services";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
       </Route>
 
       {/* Client Portal */}
