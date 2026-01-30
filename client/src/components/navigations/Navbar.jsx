@@ -33,6 +33,7 @@ function Navbar() {
     }
   }, [location]);
 
+
   // Track scroll position
   useEffect(() => {
     const handleScroll = () => {
@@ -95,6 +96,24 @@ function Navbar() {
               </Link>
             ))}
           </div>
+
+          <h1 className="text-white text-xl md:text-3xl font-bold tracking-wider">
+            KarimStudio
+          </h1>
+        </Link>
+
+        <div className="hidden md:flex items-center backdrop-blur-sm justify-between gap-[20px] w-auto h-[43px] bg-gradient-to-l from-[#9DC1F1] to-[#9DC1F1] border border-[#8cbbf9] rounded-md">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              className={getLinkClasses(item.name)}
+              onClick={() => handleNavClick(item.name, item.path)}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
 
           <span
             onClick={() => setIsOpen(true)}
