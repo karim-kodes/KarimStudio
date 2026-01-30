@@ -87,7 +87,7 @@ function PackageCard({
         withArrow={true}
         className={`flex items-center justify-center bg-transparent border ${
           isActive
-            ? "text-white border-white"
+            ? "text-primary border-primary"
             : "text-[#0669ea] border-[#0669ea]"
         }`}
       >

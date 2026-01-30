@@ -1,5 +1,5 @@
 import Caption from "../common/Caption";
-import ceoImage from "./../../assets/images/user-male-7.jpeg";
+import ceoImage from "./../../assets/images/Ceo-one.jpeg";
 function AboutHero() {
   return (
     <section className="relative overflow-hidden bg-dark">
@@ -16,18 +16,15 @@ function AboutHero() {
             Designing and building digital experiences that grow with purpose.
           </h2>
           <p className="max-w-[700px] text-gray-500 tracking-wide md:text-lg">
-
             <span className="font-semibold text-blue-500">KarimStudio</span> was
             founded with a simple goal to help brands and founders turn ideas
             into clear, functional, and scalable digital products. What started
             as a personal journey has grown into a focused practice built around
+            design, development, and long-term thinking. KarimStudio was founded
+            with a simple goal to help brands and founders turn ideas into
+            clear, functional, and scalable digital products. What started as a
+            personal journey has grown into a focused practice built around
             design, development, and long-term thinking.
-=======
-            KarimStudio was founded with a simple goal to help brands and
-            founders turn ideas into clear, functional, and scalable digital
-            products. What started as a personal journey has grown into a
-            focused practice built around design, development, and long-term
-            thinking.
           </p>
           <h4 className="text-[20px] md:text-[28px] font-semibold bg-gradient-to-r from-[#aac1e6] to-[#026dfc] bg-clip-text text-transparent">
             20+ Projects Shipped
@@ -38,7 +35,7 @@ function AboutHero() {
             <img
               src={ceoImage}
               alt="CEO Image"
-              className="w-[480px] rounded-lg border border-[#14366B]"
+              className="w-[480px] md:h-[600px] rounded-lg border border-[#14366B]"
             />
           </div>
           <div className="flex gap-[3px] flex-col">

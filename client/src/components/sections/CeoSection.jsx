@@ -1,7 +1,7 @@
 import Attribute from "../common/Attribute";
 import Button from "../common/Button";
 import Caption from "../common/Caption";
-import ceoImage from "./../../assets/images/user-male-7.jpeg";
+import ceoImage from "./../../assets/images/Ceo-THREE.jpeg";
 
 function CeoSection() {
   const attributes = [
@@ -15,7 +15,11 @@ function CeoSection() {
     <div className="flex justify-between gap-[40px] px-[20px] py-[40px] flex-col md:flex-row md:px-[120px] md:py-[120px]">
     <div className="flex justify-between px-[20px] py-[40px] flex-col md:flex-row md:px-[120px] md:py-[120px]">main
       <div className="flex items-center justify-center bg-gradient-to-r from-[#aac1e6] to-[#026dfc] p-[5px] rounded-xl">
-        <img src={ceoImage} alt="" className="w-[600px] rounded-lg" />
+        <img
+          src={ceoImage}
+          alt=""
+          className="md:w-[500px] h-[600px] rounded-lg"
+        />
       </div>
 
       <div className="flex flex-col gap-[16px] md:w-[600px]">
