@@ -1,17 +1,16 @@
-import seoImage from "../../assets/images/seo-master.jpeg";
 import ArtCard from "./ArtCard";
 
-function ArtFloating() {
+function ArtFloating({ icon, img, title, description }) {
   return (
-    <div className=" relative md:w-[390px] md:h-[224px] ">
-      <div className="flex items-center justify-center bg-gradient-to-t from-primary to-[#0c2f66] rounded-xl w-full h-full ">
+    <div className="  relative w-full md:w-[390px] md:h-[224px] ">
+      <div className="hidden md:flex items-center justify-center bg-gradient-to-t from-primary to-[#0c2f66] rounded-xl w-full h-full ">
         <img
-          src={seoImage}
+          src={img}
           alt="seo image"
-          className="w-[380px] h-[214px] rounded-xl"
+          className="md:w-[380px] md:h-[214px] rounded-xl"
         />
       </div>
-      <ArtCard />
+      <ArtCard title={title} description={description} icon={icon} />
     </div>
   );
 }

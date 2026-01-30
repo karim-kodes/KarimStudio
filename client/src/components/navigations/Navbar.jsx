@@ -9,6 +9,7 @@ import Button from "../common/Button";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("Home");
 
@@ -32,6 +33,16 @@ function Navbar() {
     }
   }, [location]);
 
+  // Track scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const getLinkClasses = (itemName) => {
     const baseClasses =
       "text-sm transition h-full flex items-center justify-center rounded-md";
@@ -46,75 +57,75 @@ function Navbar() {
 
   const handleNavClick = (itemName, path) => {
     setActiveLink(itemName);
-    if (path.includes("#")) {
-      // Handle hash navigation for same-page sections
-      const hash = path.split("#")[1];
-      const element = document.getElementById(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
   };
 
   return (
-    <nav className="w-full h-[60px] md:h-[90px] border-b-2 border-gray-600/20">
-      <div className="mx-auto h-full flex items-center justify-between py-[10px] md:py-[20px] px-[20px] md:px-[120px]">
-        {/**Logo */}
-        <Link to="/" className="flex items-center gap-2 h-[37px]">
-          <div>
-            <img
-              className="h-[28px] md:h-[40px] w-[28px] md:w-[40px]"
-              src={Logo}
-              alt="Studio Logo"
-            />
+    <>
+      <nav
+        className={`w-full h-[60px] md:h-[90px] border-b-2 border-gray-600/20 sticky top-0 z-40 transition-all duration-300 ${
+          isScrolled
+            ? "bg-[#000E24]/75 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="mx-auto h-full flex items-center justify-between py-[10px] md:py-[20px] px-[20px] md:px-[120px]">
+          {/**Logo */}
+          <Link to="/" className="flex items-center gap-2 h-[37px]">
+            <div>
+              <img
+                className="h-[28px] md:h-[40px] w-[28px] md:w-[40px]"
+                src={Logo}
+                alt="Studio Logo"
+              />
+            </div>
+            <h1 className="text-white text-xl md:text-3xl font-bold tracking-wider">
+              KarimStudio
+            </h1>
+          </Link>
+
+          <div className="hidden md:flex items-center backdrop-blur-sm justify-between gap-[20px] w-auto h-[43px] bg-gradient-to-l from-[#9DC1F1] to-[#9DC1F1] border border-[#8cbbf9] rounded-md">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={getLinkClasses(item.name)}
+                onClick={() => handleNavClick(item.name, item.path)}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
-          <h1 className="text-white text-xl md:text-3xl font-bold tracking-wider">
-            KarimStudio
-          </h1>
-        </Link>
 
-        <div className="hidden md:flex items-center backdrop-blur-sm justify-between gap-[20px] w-auto h-[43px] bg-gradient-to-l from-[#9DC1F1] to-[#9DC1F1] border border-[#8cbbf9] rounded-md">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className={getLinkClasses(item.name)}
-              onClick={() => handleNavClick(item.name, item.path)}
-            >
-              {item.name}
-            </Link>
-          ))}
+          <span
+            onClick={() => setIsOpen(true)}
+            className="flex bg-gradient-to-bl from-[#026DFC] to-[#14366B] h-[34px] w-[34px] rounded-md text-[#fcfcfc] items-center justify-center border border-[#026dfc] md:hidden cursor-pointer"
+          >
+            <Menu size={20} />
+          </span>
+
+          <Button
+            className="hidden md:flex"
+            onClick={() => {
+              document
+                .getElementById("start-project")
+                ?.scrollIntoView({ behavior: "smooth" });
+              setActiveLink("Contact");
+            }}
+          >
+            Start a Project
+          </Button>
         </div>
+      </nav>
 
-        <span
-          onClick={() => setIsOpen(true)}
-          className="flex bg-gradient-to-bl from-[#026DFC] to-[#14366B] h-[34px] w-[34px] rounded-md text-[#fcfcfc] items-center justify-center border border-[#026dfc] md:hidden cursor-pointer"
-        >
-          <Menu size={20} />
-        </span>
-
-        <Button
-          className="hidden md:flex"
-          onClick={() => {
-            document
-              .getElementById("start-project")
-              ?.scrollIntoView({ behavior: "smooth" });
-            setActiveLink("Contact");
-          }}
-        >
-          Start a Project
-        </Button>
-      </div>
-
-      {/* Mobile Overlay */}
+      {/* Mobile Overlay - MOVED OUTSIDE NAV */}
       <div
-        className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
+        className={`fixed inset-0 z-[9999] md:hidden transition-all duration-300 ${
           isOpen ? "visible" : "invisible"
         }`}
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-black/70 transition-opacity duration-300 ${
             isOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setIsOpen(false)}
@@ -160,7 +171,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-    </nav>
+    </>
   );
 }
 

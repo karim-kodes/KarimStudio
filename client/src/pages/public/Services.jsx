@@ -1,6 +1,7 @@
 import ArtSection from "../../components/sections/ArtSection";
 import Expertise from "../../components/sections/Expertise";
 import ServicesHero from "../../components/sections/ServicesHero";
+import ServicesSection from "../../components/sections/ServicesSection";
 
 function Services() {
   return (
@@ -8,6 +9,7 @@ function Services() {
       <ServicesHero />
       <Expertise />
       <ArtSection />
+      <ServicesSection />
     </div>
   );
 }
