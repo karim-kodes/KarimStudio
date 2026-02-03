@@ -6,10 +6,12 @@ import { Link, useLocation } from "react-router-dom";
 import Logo from "./../../assets/images/KarimStudio-logo.png";
 import { Menu, X } from "lucide-react";
 import Button from "../common/Button";
+import ProjectModal from "../forms/ProjectModal";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("Home");
 
@@ -43,6 +45,19 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isModalOpen]);
 
   const getLinkClasses = (itemName) => {
     const baseClasses =
@@ -124,19 +139,14 @@ function Navbar() {
 
           <Button
             className="hidden md:flex"
-            onClick={() => {
-              document
-                .getElementById("start-project")
-                ?.scrollIntoView({ behavior: "smooth" });
-              setActiveLink("Contact");
-            }}
+            onClick={() => setIsModalOpen(true)} // Open modal
           >
             Start a Project
           </Button>
         </div>
       </nav>
 
-      {/* Mobile Overlay - MOVED OUTSIDE NAV */}
+      {/* Mobile Overlay */}
       <div
         className={`fixed inset-0 z-[9999] md:hidden transition-all duration-300 ${
           isOpen ? "visible" : "invisible"
@@ -179,10 +189,8 @@ function Navbar() {
             <Button
               className="mt-4 w-full"
               onClick={() => {
-                document
-                  .getElementById("start-project")
-                  ?.scrollIntoView({ behavior: "smooth" });
-                setIsOpen(false);
+                setIsModalOpen(true); // Open modal from mobile menu
+                setIsOpen(false); // Close mobile menu
               }}
             >
               Start a Project
@@ -190,6 +198,12 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </>
   );
 }

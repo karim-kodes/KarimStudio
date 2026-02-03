@@ -11,6 +11,7 @@ import Dashboard from "./pages/client/Dashboard";
 import Projects from "./pages/client/Projects";
 import ProjectDetails from "./pages/client/ProjectDetails";
 import Services from "./pages/public/Services";
+import Work from "./pages/public/Work";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/work" element={<Work />} />
       </Route>
 
       {/* Client Portal */}
