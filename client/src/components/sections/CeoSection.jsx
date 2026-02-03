@@ -17,7 +17,7 @@ function CeoSection() {
         <img
           src={ceoImage}
           alt=""
-          className="md:w-[500px] h-[600px] rounded-lg"
+          className="md:w-[500px] md:h-[600px] rounded-lg"
         />
       </div>
 

@@ -252,7 +252,7 @@ function Work() {
   };
 
   return (
-    <div className="min-h-screen bg-dark pt-[60px] pb-20 px-2 md:px-[120px]">
+    <div className="min-h-screen bg-dark pt-[60px] pb-20 px-6 md:px-[120px]">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto mb-12">
         <div className="mb-8">
