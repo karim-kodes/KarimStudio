@@ -1,3 +1,6 @@
+
+/* eslint-disable */
+
 /* eslint-disable */
 
 function ArtCard({ icon: Icon, title, description }) {

@@ -1,4 +1,7 @@
+
+
 import ArtCard from "./ArtCard";
+
 function ArtFloating({ icon, img, title, description }) {
   return (
     <div className="  relative w-full md:w-[390px] md:h-[224px] ">
