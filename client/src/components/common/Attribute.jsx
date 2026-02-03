@@ -2,9 +2,6 @@ import { Check } from "lucide-react";
 
 function Attribute({ attribute }) {
   return (
-    <div className="flex gap-[5px] md:items-center">
-      <span className="flex items-center justify-center w-[18px] h-[18px] text-textprimary bg-primary rounded-full flex-shrink-0">
-
     <div className="flex gap-[5px] items-center">
       <span className="flex items-center justify-center w-[18px] h-[18px] text-[#fcfcfc] bg-[#026dfc] rounded-full flex-shrink-0">
         <Check size={14} />

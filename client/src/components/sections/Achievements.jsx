@@ -143,7 +143,7 @@ function Achievements() {
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
             {projects.map((project) => (
-              <div key={project.id} className="w-full flex-shrink-0 px-2">
+              <div key={project.id} className="w-full flex-shrink-0 px-6">
                 <ProjectCard
                   ProjectImage={project.image}
                   title={project.title}

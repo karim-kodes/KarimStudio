@@ -18,7 +18,7 @@ function PackageCard({
       className={`flex flex-col gap-[20px] w-[340px] md:w-[300px] p-[20px] rounded-lg relative transition-all ${
         isActive
           ? " scale-x-105 md:scale-x-100 md:scale-y-110 bg-gradient-to-bl from-[#1a1a1a] to-[#2d2d2d] border border-blue-500"
-          : "h-[448px] bg-gradient-to-bl from-[#9DC1F1] to-textprimary"
+          : "h-[448px] bg-gradient-to-bl from-[#9DC1F1] to-textPrimary"
       }`}
     >
       {isPopular && (
@@ -60,7 +60,7 @@ function PackageCard({
       <div className="flex flex-col gap-[8px] w-[260px]">
         {features.map((feature, index) => (
           <div key={index} className="flex gap-[5px] w-[260px]">
-            <span className="flex items-center justify-center w-[18px] h-[18px] text-textprimary bg-[#549eff] rounded-full flex-shrink-0">
+            <span className="flex items-center justify-center w-[18px] h-[18px] text-textPrimary bg-[#549eff] rounded-full flex-shrink-0">
               <Check size={14} />
             </span>
             <span

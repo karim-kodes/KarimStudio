@@ -3,6 +3,8 @@ import Expertise from "../../components/sections/Expertise";
 import ServicesHero from "../../components/sections/ServicesHero";
 
 import ServicesSection from "../../components/sections/ServicesSection";
+import HowItWorks from "../../components/sections/HowItWorks";
+import Testimonials from "../../components/sections/Testimonials";
 
 function Services() {
   return (
@@ -13,6 +15,8 @@ function Services() {
 
       <ServicesSection />
 
+      <HowItWorks />
+      <Testimonials />
     </div>
   );
 }

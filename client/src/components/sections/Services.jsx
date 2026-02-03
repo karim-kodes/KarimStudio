@@ -132,7 +132,7 @@ function Services() {
       </div>
 
       {/* Mobile Carousel View */}
-      <div className="md:hidden w-full px-4">
+      <div className="md:hidden w-full px-6">
         <div
           className="overflow-hidden"
           onTouchStart={onTouchStart}
@@ -144,7 +144,7 @@ function Services() {
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
             {packages.map((pkg) => (
-              <div key={pkg.id} className="w-full flex-shrink-0 px-2">
+              <div key={pkg.id} className="w-full py-4 flex-shrink-0 px-5">
                 <PackageCard
                   icon={pkg.icon}
                   price={pkg.price}
