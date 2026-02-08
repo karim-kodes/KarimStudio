@@ -41,7 +41,7 @@ function Footer() {
                     blur-[200px]"
       />
       <div className="flex flex-col gap-[20px] px-[20px] py-[40px] w-[100%] ">
-        <div className="flex flex-wrap gap-[40px] md:mx-[120px] items-center md:justify-between py-[40px] ">
+        <div className="flex flex-wrap gap-[40px] md:mx-[80px] items-center md:justify-between py-[40px] ">
           <div className="flex flex-col gap-[15px] w-[350px] md:w-[392px] h-[180px] ">
             <div className="flex gap-[10px] items-center max-h-[55px] ">
               <img

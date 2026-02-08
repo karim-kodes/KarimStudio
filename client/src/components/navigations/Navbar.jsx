@@ -77,7 +77,7 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`w-full h-[60px] md:h-[90px] border-b-2 border-gray-600/20 sticky top-0 z-40 transition-all duration-300 ${
+        className={`w-full h-[60px] md:h-[70px]  border-b-2 border-gray-600/20 sticky top-0 z-40 transition-all duration-300 ${
           isScrolled
             ? "bg-[#000E24]/75 backdrop-blur-md shadow-lg"
             : "bg-transparent"
@@ -93,7 +93,7 @@ function Navbar() {
                 alt="Studio Logo"
               />
             </div>
-            <h1 className="text-white text-xl md:text-3xl font-bold tracking-wider">
+            <h1 className="text-white text-xl md:text-2xl lg:text-3xl font-bold tracking-wider">
               KarimStudio
             </h1>
           </Link>

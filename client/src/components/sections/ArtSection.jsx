@@ -37,7 +37,7 @@ function ArtSection() {
           Brands Through Strategic Digital Solutions
         </h1>
       </div>
-      <div className="  w-full md:w-auto  left-0 -bottom-20 z-20 absolute md:-bottom-10 md:left-80 flex justify-between items-center md:gap-[200px]">
+      <div className="  w-full md:w-auto  left-0 -bottom-20 z-20 absolute md:-bottom-10 md:left-40 flex justify-between items-center md:gap-[200px]">
         {coreValues.map((value) => (
           <ArtFloating
             key={value.id}
